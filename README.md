@@ -1,5 +1,5 @@
 # AI Photo Edition
-> Python tkinter Gui Program to remove background from photos with 90-95% accuracy using API's.
+> Python tkinter Gui Program to remove background from photos with 90-95% accuracy.
 
 # Requirements
 - Python 3.8 or above.<br>
