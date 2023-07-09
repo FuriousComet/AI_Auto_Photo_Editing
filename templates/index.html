@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AI Generate Family Photo</title>
+  </head>
+  <body>
+    <h1>AI Generate Family Photo</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+      <label for="background_image">Background Image:</label>
+      <input type="file" id="background_image" name="background_image" required><br>
+
+      <label for="individual_photos">Individual Photos:</label>
+      <input type="file" id="individual_photos" name="individual_photos" multiple required><br>
+
+      <label for="spacing">Spacing:</label>
+      <input type="number" id="spacing" name="spacing" min="0" max="500" value="240" required><br>
+
+      <label for="x_offset">X Offset:</label>
+      <input type="number" id="x_offset" name="x_offset" min="0" max="500" value="0" required><br>
+
+      <label for="y_offset">Y Offset:</label>
+      <input type="number" id="y_offset" name="y_offset" min="0" max="500" value="0" required><br>
+
+      <label for="image_width">Image Width:</label>
+      <input type="number" id="image_width" name="image_width" min="100" max="1000" value="400" required><br>
+
+      <label for="image_height">Image Height:</label>
+      <input type="number" id="image_height" name="image_height" min="100" max="1000" value="550" required><br>
+
+      <input type="submit" value="Create Family Photo">
+    </form>
+    
+    {% if family_photo_exists %}
+      <h2>Family Photo:</h2>
+      <img src="{{ url_for('static', filename='family_photo.jpg') }}" alt="Family Photo">
+    {% endif %}
+  </body>
+</html>
